@@ -1,5 +1,65 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
-{{outlet}}
+<div class="align-middle inline-block min-w-full shadow overflow-hidden bg-white shadow-dashboard px-8 pt-3 rounded-bl-lg rounded-br-lg">
+  <table class="min-w-full">
+    <thead>
+      <tr>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left leading-4 text-blue-500 tracking-wider">
+          Amount
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Exchange
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Last
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  High
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Low
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Open
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Pair
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Route
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  Volume
+        </th>
+        <th class="px-6 py-3 border-b-2 border-gray-300 text-left text-sm leading-4 text-blue-500 tracking-wider">  VWAP
+        </th>
+      </tr>
+    </thead>
+    <tbody class="bg-white">
+      {{#each bitcoins as |bitcoin|}}
+        <tr>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.amount}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.exchange}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.last}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.high}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.low}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.open}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.pair}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.route}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.volume}}</div>
+          </td>
+          <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-500">
+            <div class="text-sm leading-5 text-blue-900">{{bitcoin.vwap}}</div>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
